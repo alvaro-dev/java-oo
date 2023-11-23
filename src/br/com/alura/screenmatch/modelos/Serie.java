@@ -1,5 +1,7 @@
 package br.com.alura.screenmatch.modelos;
 
+import javax.swing.plaf.basic.BasicToolBarSeparatorUI;
+
 public class Serie extends Titulo {
     private int temporadas;
     private boolean ativa;
@@ -45,5 +47,10 @@ public class Serie extends Titulo {
     @Override
     public int getDuracaoEmMinutos() {
         return temporadas * episodiosPorTemporada * minutosPorEpisodio;
+    }
+
+    @Override
+    public String toString() {
+        return "Série" + this.getNome() + "(" + this.getAnoDeLancamento() + ")";
     }
 }
